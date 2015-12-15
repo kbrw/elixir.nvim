@@ -5,5 +5,5 @@ Session.vim
 .netrwhist
 *~
 
-tools
+tools/nvim_elixir_host
 rplugin

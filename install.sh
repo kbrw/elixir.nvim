@@ -3,7 +3,7 @@ cd ${0%/*}
 mkdir -p rplugin/elixir
 
 git clone https://github.com/awetzel/neovim-elixir
-(cd neovim-elixir && mix deps.get && MIX_ENV=host mix escript.build && cp -R vim-elixir-host/tools ../)
+(cd neovim-elixir && mix deps.get && MIX_ENV=host mix escript.build && cp -R vim-elixir-host/tools/nvim_elixir_host ../tools/)
 rm -Rf neovim-elixir
 
 git clone https://github.com/awetzel/nvim-rplugin
