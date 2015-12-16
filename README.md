@@ -27,7 +27,9 @@ This Vim plugin packages both to give you a nice development environment for Eli
 
 Just copy this repository into your vim config directory and run `install.sh`
 to install both Elixir host for neovim and the elixir plugin.
-Two dependencies are needed: the official vim-elixir and vim-ref.
+
+This package has two dependencies but **optional**: the official vim-elixir for
+syntax and indent and vim-ref for doc.
 
 ```vim
 Plug 'elixir-lang/vim-elixir'
