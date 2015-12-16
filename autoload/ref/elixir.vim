@@ -5,7 +5,7 @@ function! s:opened(query)
   runtime! syntax/markdown.vim
   syn clear markdownCode
   syn clear markdownCodeBlock
-  syn region markdownCode matchgroup=markdownCodeDelimiter start="`" end="`" contains=@mdelixir
+  syn match markdownCode /`[^`]*`/ contains=@mdelixir
   syn region markdownCode matchgroup=markdownCodeDelimiter start="^\s*```.*$" end="^\s*```\ze\s*$" contains=@mdelixir
   syn match markdownCodeBlock /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/ contains=@mdelixir
 endfunction
