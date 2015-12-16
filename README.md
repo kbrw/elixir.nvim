@@ -22,6 +22,7 @@ This Vim plugin packages both to give you a nice development environment for Eli
 - You can reset binding using the bang: `:ElixirExec!`
 - Load nearest mix project in current file path with `:MixLoad`
 - Start the current mix project application inside your vim: `:MixStart`
+- Deoplete source file for async completion (https://github.com/Shougo/deoplete.nvim)
 
 # Installation
 
