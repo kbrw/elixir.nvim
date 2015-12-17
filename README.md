@@ -40,3 +40,13 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'thinca/vim-ref'
 Plug 'awetzel/elixir.nvim', { 'do': './install.sh' }
 ```
+
+# Configuration
+
+Two possible configurations are available for the completion function:
+
+- `g:elixir_maxmenu` is an integer giving the max length of the function doc
+  preview in omni completion, default to 70
+- `g:elixir_docpreview` is a boolean (int 0 or 1) to choose if you
+  want the completion function to open doc in preview window or not,
+  default to 0.
