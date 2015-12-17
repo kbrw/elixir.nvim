@@ -1,4 +1,4 @@
-# elixir.nvim
+# elixir.nvim with real contextual completion and doc
 
 NVim plugin for Elixir.
 
@@ -23,6 +23,11 @@ This Vim plugin packages both to give you a nice development environment for Eli
 - Load nearest mix project in current file path with `:MixLoad`
 - Start the current mix project application inside your vim: `:MixStart`
 - Deoplete source file for async completion (https://github.com/Shougo/deoplete.nvim)
+- The command `:ElixirBuildenv` parses the current buffer to
+  maintain a map of line-> `__ENV__`, after a call, the completion and documentation 
+  will be aware of the context (aliases, imports, use).
+- The `:ElixirBuildenv` background compilation can trigger error
+  highlighting and log into vim to help your debugging.
 
 # Installation
 
@@ -50,3 +55,9 @@ Two possible configurations are available for the completion function:
 - `g:elixir_docpreview` is a boolean (int 0 or 1) to choose if you
   want the completion function to open doc in preview window or not,
   default to 0.
+- `g:elixir_showerror` is a boolean (int 0 or 1) to choose if you
+  want to highlight the errorneous line and log the error into vim
+  during `:ElixirBuildenv` compilation. Default to 0.
+- `g:elixir_autobuild` is a boolean (int 0 or 1) to choose if you
+  want to automatically launch the environment compilation (`:ElixirBuildenv`)
+  when you leave insert mode or when you save your file. Default to 0.
