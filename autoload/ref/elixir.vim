@@ -1,6 +1,7 @@
 "" doc syntax: markdown where all code blocks are elixir, handle erlang man
 function! s:opened(query)
-  if getline(1)[0] == "#"
+  let l:erlheader = split(getline(1),'/')
+  if l:erlheader[0] != 'erlfun' && l:erlheader[0] != 'erlmod'
     syn clear
     syn include @mdelixir syntax/elixir.vim
     unlet! b:current_syntax
@@ -13,6 +14,9 @@ function! s:opened(query)
   else
     syn clear
     runtime! syntax/man.vim
+    if l:erlheader[0] == 'erlfun'
+      call search('^\s*'.l:erlheader[1].'(.*')
+    endif
   endif
 endfunction
 
