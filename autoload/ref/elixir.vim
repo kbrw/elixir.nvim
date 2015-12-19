@@ -15,7 +15,10 @@ function! s:opened(query)
     syn clear
     runtime! syntax/man.vim
     if l:erlheader[0] == 'erlfun'
+      normal d2f/
       call search('^\s*'.l:erlheader[1].'(.*')
+    else
+      normal df/
     endif
   endif
 endfunction
