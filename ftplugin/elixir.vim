@@ -1,4 +1,4 @@
 setlocal omnifunc=ElixirComplete
 if get(g:,'elixir_autobuild',0)
-  au InsertLeave,BufWritePost *.ex ElixirBuildenv
+  au InsertLeave,TextChanged *.ex,*.exs ElixirQuickBuild
 endif
