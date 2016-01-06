@@ -23,10 +23,10 @@ This Vim plugin packages both to give you a nice development environment for Eli
 - Load nearest mix project in current file path with `:MixLoad`
 - Start the current mix project application inside your vim: `:MixStart`
 - Deoplete source file for async completion (https://github.com/Shougo/deoplete.nvim)
-- The command `:ElixirBuildenv` parses the current buffer to
+- The command `:ElixirQuickBuild` parses the current buffer to
   maintain a map of line-> `__ENV__`, after a call, the completion and documentation 
   will be aware of the context (aliases, imports, use).
-- The `:ElixirBuildenv` background compilation can trigger error
+- The `:ElixirQuickBuild` background compilation can trigger error
   highlighting and log into vim to help your debugging.
 
 # Installation
@@ -57,7 +57,7 @@ Two possible configurations are available for the completion function:
   default to 0.
 - `g:elixir_showerror` is a boolean (int 0 or 1) to choose if you
   want to highlight the errorneous line and log the error into vim
-  during `:ElixirBuildenv` compilation. Default to 0.
+  during `:ElixirQuickBuild` compilation. Default to 0.
 - `g:elixir_autobuild` is a boolean (int 0 or 1) to choose if you
-  want to automatically launch the environment compilation (`:ElixirBuildenv`)
+  want to automatically launch the environment compilation (`:ElixirQuickBuild`)
   when you leave insert mode or when you save your file. Default to 0.
