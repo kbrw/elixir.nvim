@@ -43,7 +43,7 @@ syntax and indent and vim-ref for doc.
 ```vim
 Plug 'elixir-lang/vim-elixir'
 Plug 'thinca/vim-ref'
-Plug 'awetzel/elixir.nvim', { 'do': './install.sh' }
+Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 ```
 
 # Configuration
