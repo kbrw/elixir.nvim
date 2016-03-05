@@ -61,3 +61,9 @@ Two possible configurations are available for the completion function:
 - `g:elixir_autobuild` is a boolean (int 0 or 1) to choose if you
   want to automatically launch the environment compilation (`:ElixirQuickBuild`)
   when you leave insert mode or when you save your file. Default to 0.
+- `g:elixir_comp_minlen` is an integer giving the minimum string
+  length to complete by the omnicomp function, useful to avoid long
+  time synchronious completion, default to 0
+- `g:elixir_maxpreviews` is an integer giving the maximum number of
+  completion "words" where the inlined preview is shown, useful to
+  avoid slow completion rendering, default to 100
