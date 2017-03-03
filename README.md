@@ -31,15 +31,28 @@ This Vim plugin packages both to give you a nice development environment for Eli
 
 # Installation
 
+This package has two dependencies but **optional**: the official _vim-elixir_ for
+syntax and indent and _vim-ref_ for doc.
+
+**IMPORTANT:** after installation, run `:UpdateRemotePlugins` inside your neovim, then restart
+it to add then Elixir functions and commands to vim.
+
+### Manual Installation
+
 Just copy this repository into your vim config directory and run `install.sh`
 to install both Elixir host for neovim and the elixir plugin.
 
-After installation, run `:UpdateRemotePlugins` inside your neovim, then restart
-it to add then Elixir functions and commands to vim.
+### NeoBundle Installation
 
-This package has two dependencies but **optional**: the official vim-elixir for
-syntax and indent and vim-ref for doc.
+Edit your init.vim file:
+```vim
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'awetzel/elixir.nvim', {'build': { 'others': './install.sh'}}
+```
 
+### VimPlug Installation
+Edit your .vimrc file:
 ```vim
 Plug 'elixir-lang/vim-elixir'
 Plug 'thinca/vim-ref'
